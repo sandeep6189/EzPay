@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>EzPay</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/sb-admin-2.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+
+    <!-- MetisMenu CSS -->
+    <link href="{% static 'css/metisMenu.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Morris Charts CSS -->
+    <link href="{% static 'css/morris.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">EzPay</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                
+                <!-- /.dropdown -->
+                
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="admin.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="shopping.html"><i class="fa fa-shopping-cart fa-fw"></i> Shopping </a>
+                            <!--a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul-->
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" style="height:100%">
+            <div class="col-md-9" style="margin-left: 135px;">
+                <div>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Resturants</li>
+                    </ol>
+                </div>
+                <!-- /.div -->
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6" data-toggle="modal" data-target="#allIndia">
+                        <div class="thumbnail product-box">
+                            <img src="img/all_india.png" alt="" />
+                            <div class="caption">
+                                <h4><a href="#">All India </a></h4>
+                                <p> Indian Cuisine Dishes </p>
+                                <p> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="modal fade" id="allIndia" tabindex="-1" role="dialog" aria-labelledby="allIndiaLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3 class="modal-title" id="allIndia">All India Resturant</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="img/subway.png" alt="" />
+                            <div class="caption" style="padding: 13px">
+                                <h4><a href="#">Subway </a></h4>
+                                <p> Fresh Sandwiches and Salads </p>
+                                <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="img/pizza.png" alt="" style="width:123px" />
+                            <div class="caption" style="padding: 13px">
+                                <h4><a href="#">Pizza Hut</a></h4>
+                                <p> Cheesy Pizza at your doorsteps </p>
+                                <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <!-- /.row -->
+                <div>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Furniture</li>
+                    </ol>
+                </div>
+                <!-- /.div -->
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6" data-toggle="modal" data-target="#walmart">
+                        <div class="thumbnail product-box">
+                            <img src="img/walmart.png" alt="" />
+                            <div class="caption" style="padding: 13px">
+                                <h4><a href="#">Walmart</a></h4>
+                                <p> Save Money ! Live Better </p>
+                                <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="walmart" tabindex="-1" role="dialog" aria-labelledby="walmartLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3 class="modal-title" id="walmartlabel">Walmart</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="img/macy.png" alt="" style="width:126px" />
+                            <div class="caption" style="padding: 13px">
+                                <h4><a href="#">Macy</a></h4>
+                                <p> Furniure Gallery </p>
+                                <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="img/ikea.jpeg" alt="" style="width:228px"/>
+                            <div class="caption"  style="padding: 13px">
+                                <h4><a href="#">IKEA</a></h4>
+                                <p> Home Furnishings  </p>
+                                <p><a href="#" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <!-- /.row -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="{% static  'js/jquery.min.js' %}"></script>
+    <script src="{% static  'js/bootstrap.min.js' %}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{% static  'js/metisMenu.min.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static  'js/sb-admin-2.js' %}"></script>
+
+
+
+
+    <!-- Morris Charts JavaScript -->
+    <script src="{% static  'js/raphael.min.js' %}"></script>
+    <script src="{% static  'js/morris.min.js' %}"></script>
+    <script src="{% static  'js/morris-data.js' %}"></script>
+
+</body>
+</html>
