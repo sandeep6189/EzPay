@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+{% load static %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -135,10 +136,10 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="admin.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="shopping.html"><i class="fa fa-shopping-cart fa-fw"></i> Shopping </a>
+                            <a href="shopping"><i class="fa fa-shopping-cart fa-fw"></i> Shopping </a>
                             <!--a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -170,7 +171,8 @@
                 <div class="row">
                     <div class="col-md-4 text-center col-sm-6 col-xs-6" data-toggle="modal" data-target="#allIndia">
                         <div class="thumbnail product-box">
-                            <img src="img/all_india.png" alt="" />
+                                                        <img src="{% static  'img/all_india.png' %}"  alt="" />
+
                             <div class="caption">
                                 <h4><a href="#">All India </a></h4>
                                 <p> Indian Cuisine Dishes </p>
@@ -226,7 +228,7 @@
                     <!-- /.col -->
                     <div class="col-md-4 text-center col-sm-6 col-xs-6">
                         <div class="thumbnail product-box">
-                            <img src="img/subway.png" alt="" />
+                            <img src="{% static  'img/subway.png' %}"  alt="" />
                             <div class="caption" style="padding: 13px">
                                 <h4><a href="#">Subway </a></h4>
                                 <p> Fresh Sandwiches and Salads </p>
@@ -237,7 +239,8 @@
                     <!-- /.col -->
                     <div class="col-md-4 text-center col-sm-6 col-xs-6">
                         <div class="thumbnail product-box">
-                            <img src="img/pizza.png" alt="" style="width:123px" />
+                                                        <img src="{% static  'img/pizza.png' %}"  style="width:123px" alt="" />  
+
                             <div class="caption" style="padding: 13px">
                                 <h4><a href="#">Pizza Hut</a></h4>
                                 <p> Cheesy Pizza at your doorsteps </p>
@@ -260,7 +263,7 @@
                 <div class="row">
                     <div class="col-md-4 text-center col-sm-6 col-xs-6" data-toggle="modal" data-target="#walmart">
                         <div class="thumbnail product-box">
-                            <img src="img/walmart.png" alt="" />
+                            <img src="{% static  'img/walmart.png' %}"  alt="" />
                             <div class="caption" style="padding: 13px">
                                 <h4><a href="#">Walmart</a></h4>
                                 <p> Save Money ! Live Better </p>
@@ -316,7 +319,7 @@
                     <!-- /.col -->
                     <div class="col-md-4 text-center col-sm-6 col-xs-6">
                         <div class="thumbnail product-box">
-                            <img src="img/macy.png" alt="" style="width:126px" />
+                            <img src="{% static  'img/macy.png' %}"  style="width:126px" alt="" />  
                             <div class="caption" style="padding: 13px">
                                 <h4><a href="#">Macy</a></h4>
                                 <p> Furniure Gallery </p>
@@ -327,7 +330,8 @@
                     <!-- /.col -->
                     <div class="col-md-4 text-center col-sm-6 col-xs-6">
                         <div class="thumbnail product-box">
-                            <img src="img/ikea.jpeg" alt="" style="width:228px"/>
+                            <img src="{% static  'img/ikea.jpeg' %}"  style="width:228px" alt="" />  
+
                             <div class="caption"  style="padding: 13px">
                                 <h4><a href="#">IKEA</a></h4>
                                 <p> Home Furnishings  </p>
