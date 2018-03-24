@@ -280,7 +280,7 @@
                     </div>
                 </div>
                 <div class="modal fade" id="AccountModal" tabindex="-1" role="dialog" aria-labelledby="AccountModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                  <div class="modal-dialog" role="document" style="width:1000px">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h3 class="modal-title" id="AccountModalLabel">Account Details</h3>
@@ -301,7 +301,9 @@
    
                                 <li class="list-group-item">{{acc.accountNickname}} ({{acc.bankName}} - *****{{acc.lastFourAccountNumber}}) 
                                 <br>
-                                Reference ID: {{acc.moneyMovementAccountReferenceId}}
+                                <div class="alert alert-warning" role="alert">
+                                    Reference ID: {{acc.moneyMovementAccountReferenceId}}
+                                </div>
                                 </li>
                                 {% endfor %}
                               </ul>
@@ -326,7 +328,7 @@
                 </div>
 
                  <div class="modal fade" id="startAccount" tabindex="-1" role="dialog" aria-labelledby="startAccountLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                  <div class="modal-dialog" role="document" style="width:1000px">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h3 class="modal-title" id="startAccountLabel">Start Account</h3>
@@ -369,7 +371,7 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h3 class="modal-title" id="TransferModalLabel">Transfer Money</h3>
+                        <h3 class="modal-title" id="TransferModalLabel">Transfer Money (Captial One Accounts Only) </h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
