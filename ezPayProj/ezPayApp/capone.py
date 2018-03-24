@@ -50,13 +50,14 @@ def get_eligible_accounts():
 def initiate_transfer(transfer_request):
     url = CAPITAL_ONE_SANDBOX + MONEY_MOVEMENT + TRANSFER_REQUESTS
     try:
-        response = requests.post(url, json=transfer_request.__dict__, headers=api_headers)
+        print(transfer_request)
+        response = requests.post(url, json=transfer_request, headers=api_headers)
         response.raise_for_status()
         print("Post Transfer Request Successful")
         return response.json()
     except requests.exceptions.HTTPError as error:
         print(error, "\n", response.json())
-
+        return response.json()
 
 def get_transfer_request(transfer_request_id):
     url = CAPITAL_ONE_SANDBOX + MONEY_MOVEMENT + TRANSFER_REQUESTS + "/" + transfer_request_id

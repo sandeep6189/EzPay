@@ -40,7 +40,7 @@ class Transfer(models.Model):
 	destinationMoneyMovementAccountReferenceId = models.CharField(max_length=100)
 	transferAmount = models.FloatField(default = 0.0)
 	currencyCode = models.CharField(max_length=100, default = "USD")
-	transferDate =  models.DateField()
+	transferDate =  models.CharField(max_length = 10)
 	memo = models.CharField(max_length = 100)
 	transferType = models.CharField(max_length = 10, default = 'ACH', choices = TRANSFER_TYPES)
 	frequency = models.CharField(max_length = 10, default = 'OneTime', choices = FREQUENCY_TYPES)

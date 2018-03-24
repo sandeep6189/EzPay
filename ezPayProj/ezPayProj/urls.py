@@ -21,6 +21,8 @@ urlpatterns = [
     url(r'^home', ezPayApp.views.home,name="home"),
     url(r'^$', ezPayApp.views.loginpage),
     url(r'^login', ezPayApp.views.loginpage,name="loginpage"),
-	url(r'^schlogin', ezPayApp.views.schLogin,name="schlogin")
+	url(r'^schlogin', ezPayApp.views.schLogin,name="schlogin"),
+    url(r'^transfer', ezPayApp.views.transfer,name="transfer"),
+    url(r'^shopping', ezPayApp.views.shopping,name="shopping")
 
 ]

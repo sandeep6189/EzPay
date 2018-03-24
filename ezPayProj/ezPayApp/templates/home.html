@@ -145,10 +145,10 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="shopping.html"><i class="fa fa-shopping-cart fa-fw"></i> Shopping </a>
+                            <a href="shopping"><i class="fa fa-shopping-cart fa-fw"></i> Shopping </a>
                             <!--a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -175,6 +175,24 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+                {% for msg in infomsgs %}
+      <div class="panel panel-info">
+        <div class="panel-heading">
+        {{msg}}
+        </div>
+      </div>
+    {% endfor %}     
+
+{% block errblock %}
+    {% for error in errors %}
+      <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        {{error}}
+      </div>
+    {% endfor %}
+{% endblock %}
+
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="panel panel-primary" data-toggle="modal" data-target="#BalanceModal">
@@ -276,9 +294,13 @@
                                 Linked Accounts
                               </div>
                               <ul class="list-group list-group-flush" style="margin-bottom:0px">
-                                <li class="list-group-item">Bank Of America *****121</li>
-                                <li class="list-group-item">Chase *****436</li>
-                                <li class="list-group-item">PNC Bank ****238</li>
+                                {% for acc in accounts %}
+   
+                                <li class="list-group-item">{{acc.accountNickname}} ({{acc.bankName}} - *****{{acc.lastFourAccountNumber}}) 
+                                <br>
+                                Reference ID: {{acc.moneyMovementAccountReferenceId}}
+                                </li>
+                                {% endfor %}
                               </ul>
                             </div>
                           </div>
@@ -286,36 +308,39 @@
                             <div class="card">
                               <div class="card-body">
                                 <h5 class="card-title">Bank Starter (Captial One Exclusive)</h5>
-                                <a href="#" class="btn btn-primary">Create</a>
-                                <div class="modal fade" id="startAccount" tabindex="-1" role="dialog" aria-labelledby="startAccountLabel" aria-hidden="true">
-                                  <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                      <div class="modal-header">
-                                        <h3 class="modal-title" id="startAccountLabel">Start Account</h3>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                        </button>
-                                      </div>
-                                      <div class="modal-body">
-                                        Insert Here
-                                      </div>
-                                      <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
+                                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#startAccount">Create</a>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                                                    
                       <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                 <div class="modal fade" id="startAccount" tabindex="-1" role="dialog" aria-labelledby="startAccountLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="startAccountLabel">Start Account</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        {% include "application.html" %}
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+               
                 <div class="col-lg-3 col-md-6" data-toggle="modal" data-target="#TransferModal">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">

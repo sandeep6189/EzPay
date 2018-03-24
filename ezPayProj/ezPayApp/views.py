@@ -43,14 +43,31 @@ def home(request):
 	context = {}
 	
 	accounts  = get_eligible_accounts()
-	context['accounts'] = accounts
+	context['accounts'] = accounts['accounts']
 	context['form'] = TransferForm()
 	context['form_heading'] = 'Transer funds'
 	print(accounts)
 	return render(request, 'home.html', context)
 
 
+def shopping(request):
+	return render(request, 'shopping.html', {})
 
+def transfer(request):
+	form = TransferForm(request.POST)
+	valid = form.is_valid()
+	req = form.cleaned_data
+	resp = initiate_transfer(req)
+	print(resp)
+	context = {}
+	if 'description' in resp:
+		context['errors'] = [resp['description']]
+	elif 'transferRequestStatus' in resp and resp['transferRequestStatus'] == 'Scheduled':
+		context['infomsgs'] = ['Scheduled with ID: '+resp['transferRequestId']]
 
+	accounts  = get_eligible_accounts()
+	context['accounts'] = accounts['accounts']
+	context['form'] = TransferForm()
+	context['form_heading'] = 'Transer funds'
 
-
+	return render(request, 'home.html', context)

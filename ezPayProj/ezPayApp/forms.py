@@ -11,7 +11,7 @@ class TransferForm(ModelForm):
             'destinationMoneyMovementAccountReferenceId':'Reference ID for destination of funds',
             'transferAmount':'transfer Amount',
             'currencyCode':'Currency Code',
-            'transferDate':'Transfer Date',
+            'transferDate':'Transfer Date (in YYYY-MM-DD format)',
             'memo':'Memo',
             'transferType':'Transfer Type',
             'frequency':'Frequency'
