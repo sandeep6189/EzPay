@@ -3,9 +3,11 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from ezPayApp.models import *
+from ezPayApp.forms import *
 from ezPayApp.capOne import *
 from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.urls import reverse
+from django.forms import ModelForm
 
 # Create your views here.
 
@@ -42,6 +44,8 @@ def home(request):
 	
 	accounts  = get_eligible_accounts()
 	context['accounts'] = accounts
+	context['form'] = TransferForm()
+	context['form_heading'] = 'Transer funds'
 	print(accounts)
 	return render(request, 'home.html', context)
 
