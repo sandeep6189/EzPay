@@ -188,7 +188,34 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            
+                            <div class="alert alert-danger fade" id="del2">
+                              <button type="button" class="close" data-dismiss="alert">×</button>
+                               Removed from cart
+                            </div>
+                            <div class="alert alert-success fade" id="addsucc2">
+                              <button type="button" class="close" data-dismiss="alert">×</button>
+                              <strong>Congratulations!</strong> Added to cart
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Paneer">
+                              <button type="button" class="btn btn-secondary">Paneer Butter Masala</button>
+                              <button type="button" class="btn btn-secondary">$9.99</button>
+                              <button type="button" class="btn btn-success addsuccbtn2">Add</button>
+                              <button type="button" class="btn btn-danger delbtn2">Remove</button>
+                            </div>
+                            <br><br>
+                            <div class="btn-group" role="group" aria-label="Chicken">
+                              <button type="button" class="btn btn-secondary">Chicken Tikka Masala</button>
+                              <button type="button" class="btn btn-secondary">$10.99</button>
+                              <button type="button" class="btn btn-success addsuccbtn2">Add</button>
+                              <button type="button" class="btn btn-danger delbtn2">Remove</button>
+                            </div>
+                            <br><br>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-secondary">Brown Rice</button>
+                              <button type="button" class="btn btn-secondary">$2.99</button>
+                              <button type="button" class="btn btn-success addsuccbtn2">Add</button>
+                              <button type="button" class="btn btn-danger delbtn2">Remove</button>
+                            </div>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
@@ -251,7 +278,34 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            
+                            <div class="alert alert-danger fade" id="del">
+                              <button type="button" class="close" data-dismiss="alert">×</button>
+                               Removed from cart
+                            </div>
+                            <div class="alert alert-success fade" id="addsucc">
+                              <button type="button" class="close" data-dismiss="alert">×</button>
+                              <strong>Congratulations!</strong> Added to cart
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Bed">
+                              <button type="button" class="btn btn-secondary">Queen Bed + Mattress</button>
+                              <button type="button" class="btn btn-secondary">$299</button>
+                              <button type="button" class="btn btn-success addsuccbtn">Add</button>
+                              <button type="button" class="btn btn-danger delbtn">Remove</button>
+                            </div>
+                            <br><br>
+                            <div class="btn-group" role="group" aria-label="Chicken">
+                              <button type="button" class="btn btn-secondary">Computer Table</button>
+                              <button type="button" class="btn btn-secondary">$49</button>
+                              <button type="button" class="btn btn-success addsuccbtn">Add</button>
+                              <button type="button" class="btn btn-danger delbtn">Remove</button>
+                            </div>
+                            <br><br>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-secondary">Lamp with Lights</button>
+                              <button type="button" class="btn btn-secondary">$31</button>
+                              <button type="button" class="btn btn-success addsuccbtn">Add</button>
+                              <button type="button" class="btn btn-danger delbtn">Remove</button>
+                            </div>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
@@ -284,6 +338,54 @@
                     <!-- /.col -->
                 </div>
                 <!-- /.row -->
+                <div class="row">
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#payment">Shopping Cart </button>
+                    <div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="paymentLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h3 class="modal-title" id="paymentlabel"> Cart Items </h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="card">
+                                <div class="alert alert-success fade" id="addsucc3">
+                                      <button type="button" class="close" data-dismiss="alert">×</button>
+                                      <strong>Sucess!! </strong> Paid with EzPay :)
+                                    </div>
+                                <div class="card-body" style="margin-left:150px">
+                                    <div class="btn-group" role="group" aria-label="Bed">
+                                      <button type="button" class="btn btn-secondary">Paneer Butter Masala</button>
+                                      <button type="button" class="btn btn-secondary">$9.99</button>
+                                    </div>
+                                    <br><br>
+                                    <div class="btn-group" role="group" aria-label="Chicken">
+                                      <button type="button" class="btn btn-secondary">Queen Bed + Mattress</button>
+                                      <button type="button" class="btn btn-secondary addsuccbtn">$299</button>
+                                    </div>
+                                    <br><br>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                      <button type="button" class="btn btn-secondary">Lamp with Lights</button>
+                                      <button type="button" class="btn btn-secondary">$31</button>
+                                    </div>
+                                    <br><br>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <hr>
+                                        <p>Total Bill: <b>$339.99</b></p>
+                                        <button type="button" class="btn btn-success addsuccbtn3">Pay Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
                 <!-- /.row -->
             </div>
         </div>
@@ -309,6 +411,38 @@
     <script src="{% static  'js/raphael.min.js' %}"></script>
     <script src="{% static  'js/morris.min.js' %}"></script>
     <script src="{% static  'js/morris-data.js' %}"></script>
+
+
+    <script type="text/javascript">
+        $(".addsuccbtn").on("click", function() {
+            $("#addsucc").removeClass("in").show();
+            $("#addsucc").delay(200).addClass("in").fadeOut(2000);
+        });
+
+        $(".delbtn").on("click", function() {
+            console.log("hello");
+            $("#del").removeClass("in").show();
+            $("#del").delay(200).addClass("in").fadeOut(2000);
+        });
+
+        $(".addsuccbtn2").on("click", function() {
+            console.log("hello");
+            $("#addsucc2").removeClass("in").show();
+            $("#addsucc2").delay(200).addClass("in").fadeOut(2000);
+        });
+
+         $(".delbtn2").on("click", function() {
+            console.log("hello");
+            $("#del2").removeClass("in").show();
+            $("#del2").delay(200).addClass("in").fadeOut(2000);
+        });
+
+        $(".addsuccbtn3").on("click", function() {
+            console.log("hello");
+            $("#addsucc3").removeClass("in").show();
+            $("#addsucc3").delay(200).addClass("in").fadeOut(2000);
+        });
+    </script>
 
 </body>
 </html>
