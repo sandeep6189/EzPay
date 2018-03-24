@@ -203,7 +203,7 @@
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div>Balance</div>
-                                    <div class="huge">0.00</div>
+                                    <div class="huge">{{balance}}</div>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,10 @@
                             <div class="card">
                               <div class="card-body">
                                 <h5 class="card-title">Current Balance</h5>
-                                <p class="card-text"> $0.00 </p>
+                                <p class="card-text"> {{balance}} </p>
+                                <h5 class="card-title">Remaining Credit</h5>
+                                <p class="card-text"> {{remaining}} </p>
+
                                 <a href="#" class="btn btn-primary">Pay Now</a>
                               </div>
                             </div>

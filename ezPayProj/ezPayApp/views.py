@@ -10,7 +10,8 @@ from django.urls import reverse
 from django.forms import ModelForm
 
 # Create your views here.
-
+balance = 0.0
+remaining = 1000.0
 def loginpage(request):
 	if request.user and request.user.is_authenticated:
 		return HttpResponseRedirect(reverse('home'))
@@ -43,6 +44,9 @@ def home(request):
 	context = {}
 	
 	accounts  = get_eligible_accounts()
+	print(balance)
+	context['balance'] = balance
+	context['remaining'] = remaining
 	context['accounts'] = accounts['accounts']
 	context['form'] = TransferForm()
 	context['form_heading'] = 'Transer funds'
@@ -51,6 +55,13 @@ def home(request):
 
 
 def shopping(request):
+	global balance
+	global remaining
+	if request.GET.get('paybtn'):
+		print('entered paybtn')
+		balance += 339.99
+		remaining -= 339.99
+		print(balance)
 	return render(request, 'shopping.html', {})
 
 def transfer(request):
@@ -67,6 +78,8 @@ def transfer(request):
 
 	accounts  = get_eligible_accounts()
 	context['accounts'] = accounts['accounts']
+	context['balance'] = balance
+	context['remaining'] = remaining
 	context['form'] = TransferForm()
 	context['form_heading'] = 'Transer funds'
 
