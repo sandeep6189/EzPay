@@ -1,0 +1,212 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<form action="apply" method="POST">
+
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        Applicant details
+      </div>
+       <div class="panel-body">
+
+          <input type = "hidden" value = "primary" id = "applicantRole" name = "applicantRole"/>
+          First Name
+          <div class="form form-control">
+            <input type="text" name="firstNmae" required="" id="firstNmae" maxlength="150">     
+          </div>
+
+                Middle Name
+          <div class="form form-control">
+          <input type="text" name="middleName" id="middleName" maxlength="150">
+        </div>
+
+          Last Name
+          <div class="form form-control">
+          <input type="text" name="lastName" required="" id="lastName" maxlength="150">
+        </div>
+
+          Tax ID type
+          <div class="form form-control">
+           <select id="taxIdType">
+        <option value = "SSN">SSN</option>
+        <option value = "ITIN">ITIN</option>
+      </select>
+        </div>
+
+          Tax ID 
+          <div class="form form-control">
+           <input type="text" name="taxId" required="" id="taxId" maxlength="150">
+        </div>
+
+          Date of birth (in YYYY-MM-DD format) 
+          <div class="form form-control">
+           <input type="text" name="dateOfBirth" required="" id="dateOfBirth" maxlength="150">
+        </div>
+
+        <div class="panel panel-info" style="width: 60%;"> 
+            <div class="panel-heading"> 
+                Home address
+            </div> 
+            <div class="panel-body"> 
+                Address Line 1 
+                <div class="form form-control">
+                  <input type="text" name="addressLine1" required="" id="addressLine1" maxlength="150">
+                </div>
+
+                Address Line 2
+                <div class="form form-control">
+                  <input type="text" name="addressLine2" id="addressLine2" maxlength="150">
+                </div>
+
+                City
+                <div class="form form-control">
+                  <input type="text" name="city" required="" id="city" maxlength="150">
+                </div>
+
+                State Code
+                <div class="form form-control">
+                  <input type="text" name="stateCode" required="" id="stateCode" maxlength="2">
+                </div>
+
+                Postal Code
+                <div class="form form-control">
+                  <input type="text" name="postalCode" required="" id="postalCode" maxlength="10">
+                </div>
+
+            </div>
+        </div>
+
+
+        Mobile Phone number 
+        <div class="form form-control">
+           <input type="text" name="mobilePhoneNumber" required="" id="mobilePhoneNumber" maxlength="150">
+        </div>
+        <div class="form form-check">
+          <input class="form-check-input" type="checkbox" value="" id="acceptedTcpa" name="acceptedTcpa">
+          <label class="form-check-label" for="acceptedTcpa">
+            Consent to receive automated calls/texts
+          </label>
+        </div>
+
+        Email Address
+        <div class="form form-control">
+           <input type="text" name="emailAddress" required="" id="emailAddress" maxlength="150">
+        </div>
+
+        <div class="form form-check">
+          <input class="form-check-input" type="checkbox" value="" id="backupWithholding" name="backupWithholding">
+          <label class="form-check-label" for="backupWithholding">
+            Are you subject to backup witholding?
+          </label>
+        </div>
+
+        Citizenship Country
+        <div class="form form-control">
+           <input type="text" name="citizenshipCountry" required="" id="citizenshipCountry" maxlength="3">
+        </div>
+
+        Secondary Citizenship Country
+        <div class="form form-control">
+           <input type="text" name="secondaryCitizenshipCountry" id="secondaryCitizenshipCountry" maxlength="3">
+        </div>
+
+        Employment status
+          <div class="form form-control">
+           <select id="employmentStatus">
+        <option value = "Employed">Employed</option>
+        <option value = "Self-Employed">Self-Employed</option>
+        <option value = "Retired">Retired</option>
+        <option value = "Student">Student</option>
+        <option value = "Unemployed">Unemployed</option>
+
+      </select>
+        </div>        
+
+        Job Title
+        <div class="form form-control">
+           <input type="text" name="jobTitle" id="jobTitle" maxlength="100">
+        </div>
+
+        Annual Income
+        <div class="form form-control">
+           <input type="number" name="annualIncome" id="annualIncome">
+        </div>
+    </div>                       
+  </div> 
+          
+  Product 
+  <div class="form form-control">
+   <select id="productId">
+      <option value = "3000">Capital One 360 Savings Account</option>
+      <option value = "3300">Capital One 360 Money Market Account</option>
+      <option value = "3500">Capital One 360 CD</option>
+    </select>
+  </div>        
+
+  CD Term (required for 360 CD accounts)  
+  <div class="form form-control">
+   <input type="text" name="cdTerm" id="cdTerm" maxlength="100">
+  </div>
+
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        Funding details
+      </div>
+       <div class="panel-body">
+
+      Funding Type 
+      <div class="form form-control">
+       <select id="fundingType">
+          <option value = "fundach">via ACH</option>
+        </select>
+      </div> 
+
+      Funding Amount
+      <div class="form form-control">
+         <input type="number" name="fundingAmount" id="fundingAmount">
+      </div>
+
+      <div class="panel panel-info" style="width: 60%;"> 
+          <div class="panel-heading"> 
+              External Account Details 
+          </div> 
+          <div class="panel-body"> 
+              Account Number 
+              <div class="form form-control">
+                <input type="text" name="accountNumber" required="" id="accountNumber" maxlength="150">
+              </div>
+
+              Bank ABA Number 
+              <div class="form form-control">
+                <input type="text" name="bankABANumber" required="" id="bankABANumber" maxlength="150">
+              </div>
+
+              <input type = "hidden" name = "accountOwnership" id = "accountOwnership" value = "primary"/>
+          </div>
+      </div>
+    </div>
+  </div>
+      <div class="form form-check">
+        <input class="form-check-input" type="checkbox" value="" id="acceptAccountDisclosures" name="acceptAccountDisclosures">
+        <label class="form-check-label" for="acceptAccountDisclosures">
+          Accept Account Disclosures?
+        </label>
+      </div>
+
+      <div class="form form-check">
+        <input class="form-check-input" type="checkbox" value="" id="acceptPaperlessAgreement" name="acceptPaperlessAgreement">
+        <label class="form-check-label" for="acceptPaperlessAgreement">
+          Accept Paperless Agreement?
+        </label>
+      </div>
+
+      <div class="form form-check">
+        <input class="form-check-input" type="checkbox" value="" id="acceptFraudProtection" name="acceptFraudProtection">
+        <label class="form-check-label" for="acceptFraudProtection">
+          Accept Fraud Protection?
+        </label>
+      </div>
+
+  <button type="submit" class="btn btn-primary postbtn">Submit</button>  
+      
+</form>
+  

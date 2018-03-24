@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-import ezPayProj.views
+import ezPayApp.views
 
 urlpatterns = [
-    url(r'^home', ezPayProj.views.home,name="home"),
-    url(r'^$', ezPayProj.views.loginpage),
-    url(r'^login', ezPayProj.views.loginpage,name="loginpage"),
-	url(r'^schlogin', ezPayProj.views.schLogin,name="schLogin")
+    url(r'^home', ezPayApp.views.home,name="home"),
+    url(r'^$', ezPayApp.views.loginpage),
+    url(r'^login', ezPayApp.views.loginpage,name="loginpage"),
+	url(r'^schlogin', ezPayApp.views.schLogin,name="schlogin")
 
 ]

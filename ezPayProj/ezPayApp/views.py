@@ -4,6 +4,9 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from ezPayApp.models import *
 from ezPayApp.capOne import *
+from django.http import HttpResponseRedirect, HttpResponse, Http404
+from django.urls import reverse
+
 # Create your views here.
 
 def loginpage(request):
@@ -18,7 +21,7 @@ def loginpage(request):
    		return render(request,'login.html', context)
 
    	schId = request.POST.get('sch_id')
-   	sch = School.objects.get(id = schId)
+   	#sch = School.objects.get(id = schId)
 
    	return HttpResponseRedirect(reverse('schlogin'))
 
@@ -32,10 +35,14 @@ def schLogin(request):
 		return HttpResponseRedirect(reverse('home'))
 
 def home(request):
-	user = PayUser.objects.get(id = request.user)
-	context['user'] = user
-	context['accounts'] = get_eligible_accounts()
-
+	setup_oauth()
+	# user = PayUser.objects.get(stuId = request.user)
+	# context['user'] = user
+	context = {}
+	
+	accounts  = get_eligible_accounts()
+	context['accounts'] = accounts
+	print(accounts)
 	return render(request, 'home.html', context)
 
 

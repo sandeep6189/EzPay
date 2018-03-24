@@ -1,6 +1,6 @@
 import requests
 
-OAUTH_ENDPOINT = "/oauth/oauth20/token"
+OAUTH_ENDPOINT = "/oauth2/token"
 MONEY_MOVEMENT = "/money-movement"
 BANK_STARTER = '/deposits'
 TRANSFER_REQUESTS = "/transfer-requests"
@@ -8,7 +8,7 @@ ACCOUNTS = "/accounts"
 APPLICATION = '/application'
 
 def setup_oauth(client_id = 'vgw3sf4f8nq3b98i1gdfr8wpx4gpty0ska52', 
-    client_secret = 'eb5f6rda6v0d1ld8y4fymkudo86gorrc47cj', base_url = 'https://api.dxhackathon.com/'):
+    client_secret = 'eb5f6rda6v0d1ld8y4fymkudo86gorrc47cj', base_url = 'https://api.dxhackathon.com'):
     global CAPITAL_ONE_SANDBOX
     CAPITAL_ONE_SANDBOX = base_url
     payload = {
