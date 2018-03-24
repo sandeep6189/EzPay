@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    {{form_heading}}
+    </div>
+     <div class="panel-body">
+     {% if param %}
+      <form action="{% url action param %}" method="POST">
+      {% else %}
+      <form action="{% url action %}" method="POST">
+      {% endif %}
+        {% for field in form.visible_fields %}
+        {{field.label_tag}}
+        <div class="form form-control">
+        {{field}}
+      </div>
+        {% for error in field.errors %}
+          <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            {{error}}
+          </div>
+        {% endfor %}
+
+        {% endfor %}
+    <button type="submit" class="btn btn-primary postbtn">{{submit_text}}</button>  
+    {% csrf_token %}
+      </form>
+     </div>
+    </div>

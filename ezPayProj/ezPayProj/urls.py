@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+import ezPayProj.views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^home', ezPayProj.views.home,name="home"),
+    url(r'^$', ezPayProj.views.loginpage),
+    url(r'^login', ezPayProj.views.loginpage,name="loginpage"),
+	url(r'^schlogin', ezPayProj.views.schLogin,name="schLogin")
+
 ]

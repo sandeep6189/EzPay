@@ -20,10 +20,10 @@ def loginpage(request):
    	schId = request.POST.get('sch_id')
    	sch = School.objects.get(id = schId)
 
-   	return HttpResponseRedirect(reverse('schlogin/' + sch.id))
+   	return HttpResponseRedirect(reverse('schlogin'))
 
 
-def schlogin(request, schId):
+def schLogin(request):
 	
 	context = {}
 	if request.method == 'GET':
