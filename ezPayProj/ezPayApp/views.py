@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from ezPayApp.models import *
-
+from ezPayApp.capOne import *
 # Create your views here.
 
 def loginpage(request):
@@ -34,9 +34,11 @@ def schlogin(request, schId):
 def home(request):
 	user = PayUser.objects.get(id = request.user)
 	context['user'] = user
+	context['accounts'] = get_eligible_accounts()
+
 	return render(request, 'home.html', context)
 
-	
+
 
 
 
